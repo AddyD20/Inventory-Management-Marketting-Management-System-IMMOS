@@ -1,9 +1,9 @@
-const sidebar = document.querySelector('.sidebar');
-const toggleButton = document.createElement('div');
-toggleButton.classList.add('toggle-button');
-toggleButton.textContent = '☰';
-sidebar.appendChild(toggleButton);
+const toggleSidebar = document.getElementById('toggleSidebar');
+const sidebar = document.getElementById('sidebar');
+const mainContent = document.querySelector('.main-content');
 
-toggleButton.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
+toggleSidebar.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+  mainContent.classList.toggle('open');
 });
+

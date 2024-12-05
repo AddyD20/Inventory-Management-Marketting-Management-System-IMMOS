@@ -1,16 +1,24 @@
-body{
+/* General Body Styling */
+body {
     background-color: #FFF5E4;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.logo {
+    margin-top: 20%;
 }
 
+/* Sidebar Styling */
 .sidebar {
     width: 250px;
-    height: 100vh;
+    height: 100vh; /* Extend sidebar to fill full screen height */
     background-color: #FFE3E1;
     padding: 20px;
     position: fixed;
     top: 0;
     left: -250px;
     transition: left 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 .sidebar.open {
@@ -62,24 +70,215 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFCCD2; /* Slightly lighter shade for navbar */
+    padding: 20px 20px; /* Increase padding to make the navbar taller */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add slight shadow for better visibility */
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.nav-right{
+    align-items: right;
+    justify-content: end;
+    margin-left: auto;
+    gap: 30px;
+    font-family:"Concert One", sans-serif;
+    padding: 18px;
+    margin-right: 20px;
+    color: #921A40;
+    
+}
+
+.nav-right .nav-link {
+    color: #921A40 !important; /* Force override */
+    gap: 15px;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+
+.nav-link a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color */
+    font-weight: bold; /* Bold text */
+    font-size: 16px; /* Adjust font size */
+    padding: 20px;
+    color: #921A40;
+    justify-content: space-between;
+    
+}
+
+.nav-link a:hover {
+    color: #FFCCD2; /* Change color on hover */
+}
+
+.navbar-heading {
+    margin: 0;
+    font-size: 36px; /* Slightly larger text size for the heading */
+    font-family: "Concert One", sans-serif;
+    color: #921A40;
+    text-align: center;
+    justify-content: center;
+    flex-grow: 1.5;
+    margin-right: 20px;
+    margin-left: 150px;
+
+}
+
+/* Adjust spacing for toggle button */
+.navbar-container .toggle-button {
+    position: absolute;
+    left: 20px;
+    font-size: 26px; /* Increase button size slightly */
+    background: none;
+    border: none;
+    color: #921A40;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.navbar-container .toggle-button:hover {
+    color:#FFF5E4; /* Match the hover color with the navbar background */
+}
+
+/* Content Styling */
 .main-content {
     margin-left: 250px;
+    padding-top: 120px; /* Prevent content from being hidden under navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px); /* Center content vertically */
+    text-align: center;
 }
 
-.toggle-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
+.dashboard {
+    display: flex;
+    background-color: #FFE3E1;
+    border-radius: 20%;
+    flex-wrap: wrap;
 }
 
-.concert-one-regular {
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-welcome{
+    font-family: "Concert One, sans-serif" ;
+}
+
+/* When the sidebar is open, adjust the main content width */
+.sidebar.open ~ .main-content {
+    width: calc(100% - 250px);
+}
+
+/* When the sidebar is closed, adjust the main content width */
+.sidebar.closed ~ .main-content {
+    width: 100%;
+}
+
+.btn {
+    background-color: #921A40;
+    border-radius: 5px;
+    font-weight: 100;
+    padding: 10px;
+}
+
+.card-title {
     font-family: "Concert One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+    font-size: 45px;
+    margin-bottom: 0;
+}
 
-h2{
-    font-size: 30px;
-    padding-right: 20px;
+/* Card Container Styling */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: #FFE3E1;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px; /* Set a consistent width */
+    flex: 1;
+}
+
+/* Image Styling */
+.card img {
+    width: 100%; /* Ensures images fill the card width */
+    height: 200px; /* Consistent height for all images */
+    object-fit: cover; /* Ensures images are cropped proportionally */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Card Content */
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #921A40;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.card-content .btn {
+    background-color: #921A40;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.card-content .btn:hover {
+    background-color: #FFCCD2;
+    color: #921A40;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .card {
+        max-width: 90%; /* Adjust width for smaller screens */
+    }
 }
