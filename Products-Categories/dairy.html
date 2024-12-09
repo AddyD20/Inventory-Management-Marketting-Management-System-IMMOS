@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dairy.css">
+</head>
+<body>
+    
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Product Form</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Left Side: Bread crumbs -->
+      
+      <h2 class="navbar-heading">Inventory: The Midnight Café</h2>
+  
+      <!-- Right Side: Navigation Links -->
+      <div class="nav-right">
+        <a href="../homepage/homepage.html" class="nav-link">Home</a>
+        <a href="../inventory/inventory.html" class="nav-link">Inventory</a>
+        <a href="../navbar-pages/contact.html" class="nav-link">Contact</a>
+        <a href="../navbar-pages/profile.html" class="nav-link">Profile</a>
+        <a href="../homepage/homepage.html" class="nav-link">Logout</a>
+      </div>
+  
+    </div>
+    
+  </nav>
+  <!-- End Navbar -->  
+
+  <!--cards-->
+
+  <!--milk form -->
+  <div class="card">
+    <img src="../images/milk .png" alt="milk">
+    <div class="card-form">
+      <h2>Product Form</h2>
+      <form action="/submit" method="post" id="milk-table">
+        
+        <div class="form-group">
+          <label for="product_name">Product Type:</label>
+          <select id="milk_product_name" name="product_name" required>
+            <option value="" disabled selected>Select a product</option>
+            <option value="whole_milk">Whole Milk</option>
+            <option value="skim_milk">Skim Milk</option>
+            <option value="low_fat_milk">Low Fat Milk</option>
+            <option value="flavored_milk">Flavored Milk</option>
+            <option value="organic_milk">Organic Milk</option>
+            <option value="almond_milk">Almond Milk</option>
+            <option value="soy_milk">Soy Milk</option>
+            <option value="oat_milk">Oat Milk</option>
+        </select>
+        
+        </div> 
+
+        <div class="form-group">
+        <label for="quantity">Quantity(in ltr):</label>
+        <input type="number" id="milk_quantity" name="quantity" required><br><br>
+        </div>  
+
+        <div class="form-group">
+        <label for="unit_price">Unit Price:</label>
+        <input type="text" id="milk_unit_price" name="unit_price" required><br><br>
+        </div>
+        
+        <div class="form-group">
+        <label for="purchase_date">Purchase Date:</label>
+        <input type="date" id="milk_purchase_date" name="purchase_date" required><br><br>
+        </div>
+        
+        <div class="form-group">
+        <label for="expiry_date">Expiry Date:</label>
+        <input type="date" id="milk_expiry_date" name="expiry_date" required><br><br>
+        </div>   
+
+        <button type="submit">Submit</button>
+
+      </form>
+    </div>
+  </div>
+
+  <!--milk form end -->
+
+  <!--Cheese form -->
+  <div class="card">
+    <img src="../images/cheese.png" alt="cheese">
+    <div class="card-form">
+      <h2>Product Form</h2>
+      <form action="/submit" method="post" id="cheese-table">
+        
+        <div class="form-group">
+          <label for="product_name">Product Type:</label>
+          <select id="cheese_product_name" name="product_name" required>
+            <option value="" disabled selected>Select a product</option>
+            <option value="Mozzarella cheese">Mozzarella Cheese</option>
+            <option value="Cheddar cheese">Cheddar Cheese</option>
+            <option value="Cottage Cheese (Paneer)">Cottage Cheese (Paneer)</option>
+            <option value="Gouda Cheese">Gouda Cheese</option>
+            <option value="Parmesan Cheese">Parmesan Cheese</option>
+            <option value="Creme Cheese">Creme Cheese</option>
+            <option value="Ricotta cheese">Ricotta Cheese</option>
+            <option value="Brie Cheese">Brie Cheese</option>
+          </select>
+        </div> 
+
+        <div class="form-group">
+          <label for="quantity">Quantity (in blocks):</label>
+          <input type="number" id="cheese_quantity" name="quantity" required><br><br>
+        </div>  
+
+        <div class="form-group">
+          <label for="unit_price">Unit Price:</label>
+          <input type="text" id="cheese_unit_price" name="unit_price" required><br><br>
+        </div>
+        
+        <div class="form-group">
+          <label for="purchase_date">Purchase Date:</label>
+          <input type="date" id="cheese_purchase_date" name="purchase_date" required><br><br>
+        </div>
+        
+        <div class="form-group">
+          <label for="expiry_date">Expiry Date:</label>
+          <input type="date" id="cheese_expiry_date" name="expiry_date" required><br><br>
+        </div>   
+
+        <button type="submit">Submit</button>
+
+      </form>
+    </div>
+</div>
+
+  <!--cheese form end-->
+  
+  <!--butter -cream form-->
+  <div class="card">
+    <img src="../images/butter-creame.png" alt="butter-creame">
+    <div class="card-form">
+      <h2>Product Form</h2>
+      <form action="/submit" method="post" id="butter-table">
+
+        
+        <div class="form-group">
+          <label for="product_name">Product Type:</label>
+          <select id="butter_product_name" name="product_name" required>
+            <option value="" disabled selected>Select a product</option>
+            <option value="Salted Butter">Salted Butter</option>
+            <option value="Unsalted Butter">Unsalted Butter</option>
+            <option value="Garlic and Herb Butter">Garlic and Herb Butter</option>
+            <option value="Heavy Cream">Heavy Cream</option>
+            <option value="Whipping Cream">Whipping Cream</option>
+        </select>
+        
+        </div> 
+
+        <div class="form-group">
+        <label for="quantity">Quantity(in blocks and packets):</label>
+        <input type="number" id="butter_quantity" name="quantity" required><br><br>
+        </div>  
+
+        <div class="form-group">
+        <label for="unit_price">Unit Price:</label>
+        <input type="text" id="butter_unit_price" name="unit_price" required><br><br>
+        </div>
+        
+        <div class="form-group">
+        <label for="purchase_date">Purchase Date:</label>
+        <input type="date" id="butter_purchase_date" name="purchase_date" required><br><br>
+       </div>
+        
+        <div class="form-group">
+        <label for="expiry_date">Expiry Date:</label>
+        <input type="date" id="butter_expiry_date" name="expiry_date" required><br><br>
+        </div>   
+
+        <button type="submit">Submit</button> 
+      </form>
+    </div>
+  </div>
+
+  <!--butter creame -->
+  
+  
+  <script src="./dairy.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>
+
+</body>
+</html>
